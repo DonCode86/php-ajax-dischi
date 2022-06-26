@@ -10,12 +10,16 @@
   </head>
   <body>
     <div id="app">
-      <ul>
-        <li v-for="album in albums">
-          <img :src="album.poster" alt="" /> {{album.title}} {{album.author}}
-          {{album.genre}} {{album.year}}
-        </li>
-      </ul>
+      <div class="container">
+        <div class="albums">
+          <div class="album" v-for="album in albums">
+            <img class="album__img" :src="album.poster" :alt="album.title" />
+            <h5 class="album__title">{{album.title}}</h5>
+            <span class="album__author">{{album.author}}</span>
+            <small class="album__year">{{album.year}}</small>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="main.js"></script>
   </body>
